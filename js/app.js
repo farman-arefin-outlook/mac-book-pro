@@ -10,17 +10,19 @@ const deliveryCharge1 = document.getElementById('delivery-charge-1');
 const deliveryCharge2 = document.getElementById('delivery-charge-2');
 
 
-memoryButton1.addEventListener('click', function () {
-    const extraMemoryCost = document.getElementById('extra-memory-cost');
-    const extraMemoryCostUpdate = parseInt(extraMemoryCost.innerText) + 50;
-    extraMemoryCost.innerText = extraMemoryCostUpdate;
+memoryButton2.addEventListener('click', function () {
+    /*  const extraMemoryCost = document.getElementById('extra-memory-cost');
+     const extraMemoryCostUpdate = parseInt(extraMemoryCost.innerText) + 50;
+     extraMemoryCost.innerText = extraMemoryCostUpdate; */
     /*  const totalPrice = document.getElementById('total-cost');
      const totalPriceAmount = parseInt(totalPrice) + extraMemoryCostUpdate;
      totalPrice.innerText = totalPriceAmount; */
-    totalPrice = totalPrice + 50;
+    // totalPrice = totalPrice + 50;
     /* const totalPriceText = document.getElementById('total-cost');
     const totalPriceAmount = parseInt(totalPrice) + totalPrice;
     totalPriceText.innerText = totalPriceAmount; */
+    const extraMemoryCost = document.getElementById('extra-memory-cost');
+    extraMemoryCost.innerText = "180";
 });
 
 
@@ -61,13 +63,14 @@ updateMemoryCost();
 function updateMemory(memoryNo) {
     const memoryTotal = document.getElementById('extra-memory-cost');
     memoryButton1.addEventListener('click', function (event) {
-        if (storageNo == 1) {
-            const memoryTotalAmount = parseInt(memoryTotal);
-            memoryTotal.innerText = memoryTotalAmount + 50;
-        }
-        else if (memoryNo == 2) {
+        const memoryTotalAmount = parseInt(memoryTotal);
+        memoryTotal.innerText = memoryTotalAmount + 50;
+        totalPrice = totalPrice + 50;
+        const totalCost = document.getElementById('total-cost');
+        totalCost.innerText = totalPrice;
+        /* else if (memoryNo == 2) {
             const memoryTotalAmount = parseInt(memoryTotal);
             memoryTotal.innerText = memoryTotalAmount + 100;
-        }
+        } */
     })
 }
