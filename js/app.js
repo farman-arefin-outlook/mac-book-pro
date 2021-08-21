@@ -12,10 +12,35 @@ const deliveryCharge2 = document.getElementById('delivery-charge-2');
 
 let totalPrice = 1299;
 
-function updateMemoryCost() {
-    debugger;
+memoryButton1.addEventListener('click', function () {
     const extraMemoryCost = document.getElementById('extra-memory-cost');
+    const extraMemoryCostUpdate = parseInt(extraMemoryCost) + 50;
+    extraMemoryCost.innerText = extraMemoryCostUpdate;
+});
+memoryButton2.addEventListener('click', function () {
+    console.log("memory button 2 clicked");
+});
+
+storageButton1.addEventListener('click', function () {
+    console.log("storage button 1 clicked");
+});
+
+storageButton2.addEventListener('click', function () {
+    console.log("storage button 2 clicked");
+});
+storageButton3.addEventListener('click', function () {
+    console.log("storage button 3 clicked");
+});
+deliveryCharge1.addEventListener('click', function () {
+    console.log("delivery button 1 clicked");
+});
+deliveryCharge2.addEventListener('click', function () {
+    console.log("delivery button 2 clicked");
+});
+/* function updateMemoryCost() {
+    debugger;
     memoryButton1.addEventListener('click', function () {
+        const extraMemoryCost = document.getElementById('extra-memory-cost');
         const extraMemoryCostUpdate = parseInt(extraMemoryCost) + 50;
         extraMemoryCost.innerText = extraMemoryCostUpdate;
         totalPrice = totalPrice + extraMemoryCostUpdate;
@@ -23,3 +48,4 @@ function updateMemoryCost() {
 }
 
 updateMemoryCost();
+ */
