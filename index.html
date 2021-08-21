@@ -68,13 +68,26 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">Delivery charge</th>
-                                            <td>$<span id="delivery-charge"></span></td>
+                                            <td>$<span id="delivery-charge">0</span></td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
-
+                                        <th scope="row">Total</th>
+                                        <td>$<span id="total-cost">0</span></td>
                                     </tfoot>
                                 </table>
+                            </div>
+                            <div class="container my-5">
+                                <h3>Add Promo Code</h3>
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Add Promo Code"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-danger" type="submit">Apply</button>
+                                </form>
+                            </div>
+                            <hr>
+                            <div>
+                                <h1>Total: $<span id="total-amount">1299</span></h1>
                             </div>
                         </div>
                     </div>
