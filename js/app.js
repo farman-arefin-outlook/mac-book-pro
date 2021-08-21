@@ -1,7 +1,6 @@
-
+let totalPrice = 1299;
 const memoryButton1 = document.getElementById('memory-button-1');
 const memoryButton2 = document.getElementById('memory-button-2');
-
 
 const storageButton1 = document.getElementById('storage-button-1');
 const storageButton2 = document.getElementById('storage-button-2');
@@ -10,14 +9,27 @@ const storageButton3 = document.getElementById('storage-button-3');
 const deliveryCharge1 = document.getElementById('delivery-charge-1');
 const deliveryCharge2 = document.getElementById('delivery-charge-2');
 
-let totalPrice = 1299;
+
 memoryButton1.addEventListener('click', function () {
     const extraMemoryCost = document.getElementById('extra-memory-cost');
     const extraMemoryCostUpdate = parseInt(extraMemoryCost.innerText) + 50;
     extraMemoryCost.innerText = extraMemoryCostUpdate;
+    /*  const totalPrice = document.getElementById('total-cost');
+     const totalPriceAmount = parseInt(totalPrice) + extraMemoryCostUpdate;
+     totalPrice.innerText = totalPriceAmount; */
+    totalPrice = totalPrice + 50;
+    /* const totalPriceText = document.getElementById('total-cost');
+    const totalPriceAmount = parseInt(totalPrice) + totalPrice;
+    totalPriceText.innerText = totalPriceAmount; */
 });
+
+
 memoryButton2.addEventListener('click', function () {
-    console.log("memory button 2 clicked");
+    const extraMemoryCost = document.getElementById('extra-memory-cost');
+    const extraMemoryCostUpdate = parseInt(extraMemoryCost) + 100;
+    extraMemoryCost.innerText = extraMemoryCost;
+
+    if ()
 });
 
 storageButton1.addEventListener('click', function () {
