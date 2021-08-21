@@ -12,13 +12,14 @@ const deliveryCharge2 = document.getElementById('delivery-charge-2');
 
 let totalPrice = 1299;
 
-function updateMemoryCost(extraMemoryCost) {
+function updateMemoryCost() {
     debugger;
+    const extraMemoryCost = document.getElementById('extra-memory-cost');
     memoryButton1.addEventListener('click', function () {
         const extraMemoryCostUpdate = parseInt(extraMemoryCost) + 50;
         extraMemoryCost.innerText = extraMemoryCostUpdate;
         totalPrice = totalPrice + extraMemoryCostUpdate;
     });
 }
-const extraMemoryCost = document.getElementById('extra-memory-cost');
-updateMemoryCost(extraMemoryCost);
+
+updateMemoryCost();
