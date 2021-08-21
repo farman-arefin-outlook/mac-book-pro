@@ -1,76 +1,38 @@
-let totalPrice = 1299;
-const memoryButton1 = document.getElementById('memory-button-1');
-const memoryButton2 = document.getElementById('memory-button-2');
+const memoryId1 = document.getElementById('memory-button-1');
+const memoryId2 = document.getElementById('memory-button-2');
+const storagId1 = document.getElementById('storage-button-1');
+const storagId2 = document.getElementById('storage-button-2');
+const storagId3 = document.getElementById('storage-button-3');
 
-const storageButton1 = document.getElementById('storage-button-1');
-const storageButton2 = document.getElementById('storage-button-2');
-const storageButton3 = document.getElementById('storage-button-3');
-
-const deliveryCharge1 = document.getElementById('delivery-charge-1');
-const deliveryCharge2 = document.getElementById('delivery-charge-2');
-
-
-memoryButton2.addEventListener('click', function () {
-    /*  const extraMemoryCost = document.getElementById('extra-memory-cost');
-     const extraMemoryCostUpdate = parseInt(extraMemoryCost.innerText) + 50;
-     extraMemoryCost.innerText = extraMemoryCostUpdate; */
-    /*  const totalPrice = document.getElementById('total-cost');
-     const totalPriceAmount = parseInt(totalPrice) + extraMemoryCostUpdate;
-     totalPrice.innerText = totalPriceAmount; */
-    // totalPrice = totalPrice + 50;
-    /* const totalPriceText = document.getElementById('total-cost');
-    const totalPriceAmount = parseInt(totalPrice) + totalPrice;
-    totalPriceText.innerText = totalPriceAmount; */
-    const extraMemoryCost = document.getElementById('extra-memory-cost');
-    extraMemoryCost.innerText = "180";
+const delivery1 = document.getElementById('delivery-charge-1');
+const delivery2 = document.getElementById('delivery-charge-2');
+memoryId1.addEventListener('click', function () {
+    const memoryText = document.getElementById('extra-memory-cost');
+    memoryText.innerText = '0';
+});
+memoryId2.addEventListener('click', function () {
+    const memoryText = document.getElementById('extra-memory-cost');
+    memoryText.innerText = '180';
 });
 
-
-memoryButton2.addEventListener('click', function () {
-    const extraMemoryCost = document.getElementById('extra-memory-cost');
-    const extraMemoryCostUpdate = parseInt(extraMemoryCost) + 100;
-    extraMemoryCost.innerText = extraMemoryCost;
+storagId1.addEventListener('click', function () {
+    const storageText = document.getElementById('extra-storage-cost');
+    storageText.innerText = '0';
+});
+storagId2.addEventListener('click', function () {
+    const storageText = document.getElementById('extra-storage-cost');
+    storageText.innerText = '100';
+});
+storagId3.addEventListener('click', function () {
+    const storageText = document.getElementById('extra-storage-cost');
+    storageText.innerText = '180';
 });
 
-storageButton1.addEventListener('click', function () {
-    console.log("storage button 1 clicked");
+delivery1.addEventListener('click', function () {
+    const deliveryCharge = document.getElementById('total-delivery-charge');
+    deliveryCharge.innerText = '0';
 });
-
-storageButton2.addEventListener('click', function () {
-    console.log("storage button 2 clicked");
+delivery2.addEventListener('click', function () {
+    const deliveryCharge = document.getElementById('total-delivery-charge');
+    deliveryCharge.innerText = '20';
 });
-storageButton3.addEventListener('click', function () {
-    console.log("storage button 3 clicked");
-});
-deliveryCharge1.addEventListener('click', function () {
-    console.log("delivery button 1 clicked");
-});
-deliveryCharge2.addEventListener('click', function () {
-    console.log("delivery button 2 clicked");
-});
-/* function updateMemoryCost() {
-    debugger;
-    memoryButton1.addEventListener('click', function () {
-        const extraMemoryCost = document.getElementById('extra-memory-cost');
-        const extraMemoryCostUpdate = parseInt(extraMemoryCost) + 50;
-        extraMemoryCost.innerText = extraMemoryCostUpdate;
-        totalPrice = totalPrice + extraMemoryCostUpdate;
-    });
-}
-
-updateMemoryCost();
- */
-function updateMemory(memoryNo) {
-    const memoryTotal = document.getElementById('extra-memory-cost');
-    memoryButton1.addEventListener('click', function (event) {
-        const memoryTotalAmount = parseInt(memoryTotal);
-        memoryTotal.innerText = memoryTotalAmount + 50;
-        totalPrice = totalPrice + 50;
-        const totalCost = document.getElementById('total-cost');
-        totalCost.innerText = totalPrice;
-        /* else if (memoryNo == 2) {
-            const memoryTotalAmount = parseInt(memoryTotal);
-            memoryTotal.innerText = memoryTotalAmount + 100;
-        } */
-    })
-}
