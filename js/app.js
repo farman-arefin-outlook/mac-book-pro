@@ -11,10 +11,9 @@ const deliveryCharge1 = document.getElementById('delivery-charge-1');
 const deliveryCharge2 = document.getElementById('delivery-charge-2');
 
 let totalPrice = 1299;
-const memoryExtraPrice = 50;
 memoryButton1.addEventListener('click', function () {
     const extraMemoryCost = document.getElementById('extra-memory-cost');
-    const extraMemoryCostUpdate = parseInt(extraMemoryCost) + parseInt(memoryExtraPrice);
+    const extraMemoryCostUpdate = parseInt(extraMemoryCost.innerText) + 50;
     extraMemoryCost.innerText = extraMemoryCostUpdate;
 });
 memoryButton2.addEventListener('click', function () {
