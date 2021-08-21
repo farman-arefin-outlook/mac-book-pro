@@ -8,9 +8,6 @@ const storagId3 = document.getElementById('storage-button-3');
 const delivery1 = document.getElementById('delivery-charge-1');
 const delivery2 = document.getElementById('delivery-charge-2');
 
-//Function for updating Total
-
-
 memoryId1.addEventListener('click', function () {
     const memoryText = document.getElementById('extra-memory-cost');
     memoryText.innerText = '0';
@@ -49,6 +46,8 @@ delivery2.addEventListener('click', function () {
     updateTotal();
 });
 
+
+//Function For update The total Price
 function updateTotal() {
     debugger;
     const bestPrice = document.getElementById('best-price-total');
@@ -56,6 +55,7 @@ function updateTotal() {
     const storagePriceText = document.getElementById('extra-storage-cost');
     const deliveryCostText = document.getElementById('total-delivery-charge');
     const totalCostField = document.getElementById('total-cost');
+    const totalAmountText = document.getElementById('total-amount');
     const bestPriceTotal = parseInt(bestPrice.innerText);
     const memoryPrice = parseInt(memoryPriceText.innerText);
     const storagePrice = parseInt(storagePriceText.innerText);
@@ -63,4 +63,22 @@ function updateTotal() {
     /*  const total = parseInt(memoryPriceText) + parseInt(storagePriceText) + parseInt(deliveryCostText); */
     const total = bestPriceTotal + memoryPrice + storagePrice + deliveryTotal
     totalCostField.innerText = total;
+    totalAmountText.innerText = total;
 }
+
+//Function for discount
+
+/* function discountFunction() {
+    document.getElementById('apply-button').addEventListener('click', function () {
+        const discountAmountText = document.getElementById('dicount-field');
+        const discountAmount = discountAmountText.value;
+        if (discountAmount.toLowerCase() == 'stevekaku') {
+            const totalAmount = updateTotal() * 0.2;
+            const totalCostField = document.getElementById('total-cost');
+            const totalAmountText = document.getElementById('total-amount');
+            totalCostField.innerText = totalAmount;
+            totalAmountText.innerText = totalAmount;
+        }
+    });
+}
+ */
