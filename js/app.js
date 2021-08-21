@@ -28,8 +28,6 @@ memoryButton2.addEventListener('click', function () {
     const extraMemoryCost = document.getElementById('extra-memory-cost');
     const extraMemoryCostUpdate = parseInt(extraMemoryCost) + 100;
     extraMemoryCost.innerText = extraMemoryCost;
-
-    if ()
 });
 
 storageButton1.addEventListener('click', function () {
@@ -60,3 +58,16 @@ deliveryCharge2.addEventListener('click', function () {
 
 updateMemoryCost();
  */
+function updateMemory(memoryNo) {
+    const memoryTotal = document.getElementById('extra-memory-cost');
+    memoryButton1.addEventListener('click', function (event) {
+        if (storageNo == 1) {
+            const memoryTotalAmount = parseInt(memoryTotal);
+            memoryTotal.innerText = memoryTotalAmount + 50;
+        }
+        else if (memoryNo == 2) {
+            const memoryTotalAmount = parseInt(memoryTotal);
+            memoryTotal.innerText = memoryTotalAmount + 100;
+        }
+    })
+}
